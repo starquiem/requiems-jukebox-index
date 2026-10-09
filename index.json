@@ -1,13 +1,12 @@
+
 {
   "manifest": 1,
   "name": "requiem",
   "id": "requiem-index-boi",
-  "description": "i  like apples and bananas - nathan south park",
+  "description": "i like apples and bananas - nathan south park",
   "lastUpdate": 0,
   "links": {
     "discord": "no"
-
-    }
   },
   "nongs": {
     "hosted": {
@@ -17,13 +16,6 @@
         "startOffset": 0,
         "url": "https://audio.jukehost.co.uk/01a12227-0006-707b-9323-77ae33006497",
         "songs": [823674]
-      },
-      "uuid-2-ejemplo": {
-        "name": "Otra canción",
-        "artist": "Otro artista",
-        "startOffset": 0,
-        "url": "https://tuservidor.com/download/otro-archivo.mp3",
-        "songs": [123457]
       }
     }
   }
