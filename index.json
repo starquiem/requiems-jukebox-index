@@ -22,30 +22,6 @@
         "startOffset": 0,
         "url": "https://audio.jukehost.co.uk/01a12295-53c9-725d-bcf1-9d55535f1925",
         "songs": [717444]
-{
-  "manifest": 1,
-  "name": "requiem",
-  "id": "requiem-index-boi",
-  "description": "i like apples and bananas - nathan south park",
-  "lastUpdate": 4,
-  "links": {
-    "discord": "no"
-  },
-  "nongs": {
-    "hosted": {
-      "cup-de-grace": {
-        "name": "Cup De Grace",
-        "artist": "DaGames",
-        "startOffset": 0,
-        "url": "https://audio.jukehost.co.uk/01a12227-0006-707b-9323-77ae33006497",
-        "songs": [823674]
-      },
-      "world-wide-noise": {
-        "name": "World Wide Noise",
-        "artist": "Pizza Tower OST",
-        "startOffset": 0,
-        "url": "https://audio.jukehost.co.uk/01a12295-53c9-725d-bcf1-9d55535f1925",
-        "songs": [717444]
       },
       "we-are-stop-the-attack": {
         "name": "We Are Stop The Attack",
