@@ -134,6 +134,20 @@
         "startOffset": 0,
         "url": "https://audio.jukehost.co.uk/01a12393-c697-739d-97a1-da06ce17e2d5",
         "songs": [956677]
+                        },
+      "virtual-insanity": {
+        "name": "Virtual Insanity",
+        "artist": "Jamiroquai",
+        "startOffset": 0,
+        "url": "https://audio.jukehost.co.uk/01a123b1-b350-7198-a9da-d97dc993253f",
+        "songs": [32207]
+                                },
+      "jane": {
+        "name": "Jane!",
+        "artist": "AjayRoy",
+        "startOffset": 0,
+        "url": "https://audio.jukehost.co.uk/01a123b1-6b81-7261-b6c3-dfad7cee99b9",
+        "songs": [623104]
     }
    }
   }
