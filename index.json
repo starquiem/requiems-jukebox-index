@@ -92,6 +92,41 @@
         "startOffset": 0,
         "url": "https://audio.jukehost.co.uk/01a12352-6381-72fa-924e-ef135cda2466",
         "songs": [905108]
+                     },
+      "harder-better-faster-stronger": {
+        "name": "Harder Better Faster Stronger",
+        "artist": "Daft Punk",
+        "startOffset": 0,
+        "url": "https://audio.jukehost.co.uk/01a1236a-4462-7152-9142-f4ab00a06592",
+        "songs": [739991]
+                    },
+      "its-verity": {
+        "name": "Hey It's Me, It's Verity!",
+        "artist": "Horror Skunx",
+        "startOffset": 0,
+        "url": "https://audio.jukehost.co.uk/01a1236e-918e-704f-8a4a-32ad559ce9e7",
+        "songs": [587069]
+                            },
+      "its-verity": {
+        "name": "",
+        "artist": "Horror Skunx",
+        "startOffset": 0,
+        "url": "https://audio.jukehost.co.uk/01a1236e-918e-704f-8a4a-32ad559ce9e7",
+        "songs": [587069]
+                            },
+      "verity-band-be-my-friend": {
+        "name": "The Verity Band - Be My Friend!",
+        "artist": "Horror Skunx",
+        "startOffset": 0,
+        "url": "https://audio.jukehost.co.uk/01a1236f-a716-7241-a522-d4f1c6e90328",
+        "songs": [587069]
+           },
+      "master-of-humanity": {
+        "name": "Lord Verity - Master of Humanity",
+        "artist": "Horror Skunx",
+        "startOffset": 0,
+        "url": "https://audio.jukehost.co.uk/01a1236f-9deb-7222-b2db-42006c2e6cc5",
+        "songs": [587069]
     }
    }
   }
