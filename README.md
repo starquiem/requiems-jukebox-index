@@ -9,7 +9,7 @@ i made this for fun
 1. [get geode for your platform](https://geode-sdk.org/)
 2. [get the jukebox mod](https://geode-sdk.org/mods/fleym.nongd)
 3. go 2 jukebox settings and click index
-4. add the "raw.githubusercontent.com" url to `index.json`
+4. add the "raw.githubusercontent.com" url to the index
 5. click apply
 
 ## some notes
