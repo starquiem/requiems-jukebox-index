@@ -60,10 +60,31 @@
                      },
       "moldova": {
         "name": "Bãtutã din Moldova",
-        "artist": "Fanfare Vagabontu - Topic",
+        "artist": "Fanfare Vagabontu",
         "startOffset": 0,
         "url": "https://audio.jukehost.co.uk/01a12347-974e-70ff-a634-33d373668aee",
         "songs": [533927]
+                     },
+      "charlies-inferno": {
+        "name": "Charlie's Inferno",
+        "artist": "That Handsome Devil",
+        "startOffset": 0,
+        "url": "https://audio.jukehost.co.uk/01a1234c-c3cb-719b-9d85-4adadb463201",
+        "songs": [508568]
+                      },
+      "charlies-inferno-jazz": {
+        "name": "Charlie's Inferno ( Jazz Edition )",
+        "artist": "Matt Dusk",
+        "startOffset": 0,
+        "url": "https://audio.jukehost.co.uk/01a12352-8dee-70dd-a485-794f00c77f30",
+        "songs": [508568]
+                      },
+      "the-money-grab": {
+        "name": "The Money Grab ( Charlie's Inferno 2 )",
+        "artist": "That Handsome Devil",
+        "startOffset": 0,
+        "url": "https://audio.jukehost.co.uk/01a12352-6381-72fa-924e-ef135cda2466",
+        "songs": [905108]
     }
    }
   }
