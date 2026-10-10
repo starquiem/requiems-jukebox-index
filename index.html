@@ -1,21 +1,20 @@
-
 <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>requiem — song index</title>
+  <title>poopbox radio</title>
   <style>
     :root {
       color-scheme: light dark;
       --page: light-dark(#f7f7f5, #171717);
-      --panel: light-dark(#fff, #1d1d1d);
+      --panel: light-dark(#ffffff, #1d1d1d);
       --panel-soft: light-dark(#f0f0ed, #242424);
       --text: light-dark(#202020, #f1f1ef);
       --muted: light-dark(#74746f, #a5a59e);
       --border: light-dark(#deded8, #373737);
       --accent: light-dark(#282828, #eeeeea);
-      --accent-text: light-dark(#fff, #171717);
+      --accent-text: light-dark(#ffffff, #171717);
       --link: light-dark(#434343, #cfcfc8);
     }
 
@@ -62,17 +61,18 @@
       border: 1px solid var(--border);
     }
 
-    .brand-art svg { width: 100%; height: 100%; display: block; }
+    .brand-art svg { display: block; width: 100%; height: 100%; }
     .brand-copy { display: grid; gap: 1px; }
     .brand-title { font-size: 16px; line-height: 1.2; }
-    .brand-meta { color: var(--muted); font-size: 11px; font-weight: 400; }
 
-    .toplink {
-      font-size: 12px;
+    .brand-meta {
       color: var(--muted);
-      text-decoration: none;
+      font-size: 11px;
+      font-weight: 400;
+      letter-spacing: 0;
     }
 
+    .toplink { font-size: 12px; color: var(--muted); text-decoration: none; }
     .toplink:hover { color: var(--text); text-decoration: underline; }
 
     main {
@@ -82,7 +82,13 @@
     }
 
     .intro { margin-bottom: 26px; }
-    .eyebrow { color: var(--muted); font-size: 12px; margin-bottom: 8px; }
+
+    .eyebrow {
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 500;
+      margin-bottom: 8px;
+    }
 
     h1 {
       margin: 0;
@@ -124,7 +130,10 @@
       outline: none;
     }
 
-    input[type="search"]:focus { border-color: var(--muted); }
+    input[type="search"]:focus {
+      border-color: var(--muted);
+      box-shadow: 0 0 0 3px light-dark(#0000000c, #ffffff0c);
+    }
 
     .filters {
       display: flex;
@@ -192,8 +201,8 @@
       vertical-align: middle;
     }
 
-    tbody tr:hover { background: var(--panel-soft); }
-    .num { color: var(--muted); width: 42px; }
+    tbody tr:hover { background: light-dark(#fafaf8, #222222); }
+    .num { color: var(--muted); width: 42px; font-variant-numeric: tabular-nums; }
     .art-cell { width: 76px; }
 
     .artwork {
@@ -202,6 +211,7 @@
       overflow: hidden;
       border-radius: 7px;
       border: 1px solid var(--border);
+      box-shadow: 0 1px 2px #00000010;
     }
 
     .artwork svg { display: block; width: 100%; height: 100%; }
@@ -220,6 +230,9 @@
     .artist { color: var(--muted); }
 
     .audio-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
       text-decoration: none;
       font-weight: 600;
       color: var(--link);
@@ -228,6 +241,8 @@
     .audio-link:hover { text-decoration: underline; color: var(--text); }
 
     .idcode {
+      display: inline-block;
+      margin: 2px;
       font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
       background: var(--panel-soft);
       border: 1px solid var(--border);
@@ -243,7 +258,7 @@
       margin-top: 14px;
       padding: 13px 15px;
       border: 1px solid var(--border);
-      border-radius: 8px;
+      border-radius: 10px;
       color: var(--muted);
       font-size: 12px;
       display: flex;
@@ -252,8 +267,16 @@
       align-items: center;
     }
 
-    .note a { color: var(--text); }
-    footer { margin-top: 28px; display: flex; justify-content: space-between; color: var(--muted); font-size: 11px; }
+    .note a { color: var(--text); text-underline-offset: 3px; white-space: nowrap; }
+
+    footer {
+      margin-top: 28px;
+      display: flex;
+      justify-content: space-between;
+      color: var(--muted);
+      font-size: 11px;
+      gap: 12px;
+    }
 
     @media (max-width: 600px) {
       main { padding: 32px 14px 48px; }
@@ -266,11 +289,12 @@
     }
   </style>
 </head>
+
 <body>
   <div class="root">
     <header class="topbar">
       <div class="brand">
-        <div class="brand-art" role="img" aria-label="Requiem artwork">
+        <div class="brand-art" role="img" aria-label="Requiem record artwork">
           <svg viewBox="0 0 64 64" aria-hidden="true">
             <rect width="64" height="64" fill="#26232d"/>
             <circle cx="32" cy="32" r="23" fill="#45404f" stroke="#a9a1b6" stroke-width="1.5"/>
@@ -285,22 +309,28 @@
           <span class="brand-meta">custom GD music</span>
         </div>
       </div>
-      <a class="toplink" href="https://raw.githubusercontent.com/starquiem/requiems-jukebox-index/main/index.json" target="_blank">view index JSON ↗</a>
+
+      <a class="toplink"
+         href="https://raw.githubusercontent.com/starquiem/requiems-jukebox-index/main/index.json"
+         target="_blank" rel="noreferrer">view index JSON ↗</a>
     </header>
 
     <main>
       <section class="intro">
         <div class="eyebrow">geometry dash · custom music</div>
         <h1>the songs.</h1>
-        <p class="sub">Songs currently in my Jukebox index.</p>
+        <p class="sub">Songs loaded automatically from my Jukebox JSON index.</p>
       </section>
 
-      <section class="toolbar">
+      <section class="toolbar" aria-label="Song filters">
         <div class="search-wrap">
-          <span class="search-icon">⌕</span>
-          <input id="search" type="search" placeholder="Search by song, artist, or ID…" autocomplete="off">
+          <span class="search-icon" aria-hidden="true">⌕</span>
+          <input id="search" type="search"
+                 placeholder="Search by song, artist, or ID…"
+                 autocomplete="off" aria-label="Search songs">
         </div>
-        <div class="filters">
+
+        <div class="filters" role="group" aria-label="Filter by type">
           <button class="filter" data-filter="all" aria-pressed="true">All</button>
           <button class="filter" data-filter="mashup" aria-pressed="false">Mashups</button>
           <button class="filter" data-filter="nong" aria-pressed="false">NONGs</button>
@@ -308,88 +338,125 @@
       </section>
 
       <div class="statusrow">
-        <span id="count" class="count">2 songs</span>
-        <span>in index order</span>
+        <span id="count" class="count">Loading songs…</span>
+        <span id="loadstatus">fetching index.json</span>
       </div>
 
       <div class="tablewrap">
         <table>
           <thead>
-            <tr><th>#</th><th>Artwork</th><th>Name</th><th>Artist</th><th>Audio</th><th>Song ID(s)</th></tr>
+            <tr>
+              <th>#</th>
+              <th>Artwork</th>
+              <th>Name</th>
+              <th>Artist</th>
+              <th>Audio</th>
+              <th>Song ID(s)</th>
+            </tr>
           </thead>
           <tbody id="songs"></tbody>
         </table>
-        <div id="empty" class="empty" hidden><strong>Nothing here.</strong> Try another search or filter.</div>
+
+        <div id="empty" class="empty" hidden>
+          <strong>empty</strong>
+          try something else
+        </div>
       </div>
 
       <div class="note">
-        <span>Audio links open on JukeHost. Song IDs are GD song IDs, not level IDs.</span>
-        <a href="https://github.com/starquiem/requiems-jukebox-index" target="_blank">index on GitHub ↗</a>
+        <span>audio links are hosted somewhere else - the ids are NOT level ids, they are song ids.</span>
+        <a href="https://github.com/starquiem/requiems-jukebox-index"
+           target="_blank" rel="noreferrer">index on github ↗</a>
       </div>
 
       <footer>
-        <span>requiem · my custom music list</span>
-        <span id="visible">showing 2 of 2</span>
+        <span>shitbox studio</span>
+        <span id="visible">loading songs</span>
       </footer>
     </main>
   </div>
 
   <script>
-    const songs = [
-      {
-        name: "Cup De Grace",
-        artist: "DaGames",
-        url: "https://audio.jukehost.co.uk/01a12227-0006-707b-9323-77ae33006497",
-        ids: [823674],
-        type: "nong",
-        art: "cup"
-      },
-      {
-        name: "World Wide Noise",
-        artist: "Pizza Tower OST",
-        url: "https://audio.jukehost.co.uk/01a12295-53c9-725d-bcf1-9d55535f1925",
-        ids: [717444],
-        type: "nong",
-        art: "noise"
-      }
-    ];
+    const INDEX_URL =
+      "https://raw.githubusercontent.com/starquiem/requiems-jukebox-index/main/index.json";
+
+    let songs = [];
 
     const tbody = document.getElementById("songs");
     const empty = document.getElementById("empty");
     const search = document.getElementById("search");
     const count = document.getElementById("count");
     const visible = document.getElementById("visible");
+    const loadstatus = document.getElementById("loadstatus");
+
     let activeFilter = "all";
+
+    function escapeSvgText(value) {
+      return String(value).replace(/[&<>"']/g, char => ({
+        "&": "&amp;",
+        "<": "&lt;",
+        ">": "&gt;",
+        "\"": "&quot;",
+        "'": "&apos;"
+      })[char]);
+    }
 
     function createArtwork(song) {
       const cell = document.createElement("td");
       cell.className = "art-cell";
+
       const art = document.createElement("div");
       art.className = "artwork";
       art.setAttribute("role", "img");
       art.setAttribute("aria-label", `Artwork preview for ${song.name}`);
 
       if (song.art === "cup") {
-        art.innerHTML = `<svg viewBox="0 0 64 64" aria-hidden="true">
-          <rect width="64" height="64" fill="#29252f"/>
-          <circle cx="32" cy="29" r="22" fill="#94505c"/>
-          <circle cx="32" cy="29" r="16" fill="#29252f" stroke="#d9b9ad" stroke-width="1.5"/>
-          <circle cx="32" cy="29" r="8" fill="#e3d6bf"/>
-          <circle cx="32" cy="29" r="2.4" fill="#29252f"/>
-          <path d="M9 50 L22 43 M43 15 L55 9" stroke="#e3d6bf" stroke-width="2" stroke-linecap="round"/>
-          <text x="32" y="60" fill="#f0e7da" text-anchor="middle" font-size="6.5" letter-spacing="1.8">CDG</text>
-        </svg>`;
+        art.innerHTML = `
+          <svg viewBox="0 0 64 64" aria-hidden="true">
+            <rect width="64" height="64" fill="#29252f"/>
+            <circle cx="32" cy="29" r="22" fill="#94505c"/>
+            <circle cx="32" cy="29" r="16" fill="#29252f" stroke="#d9b9ad" stroke-width="1.5"/>
+            <circle cx="32" cy="29" r="8" fill="#e3d6bf"/>
+            <circle cx="32" cy="29" r="2.4" fill="#29252f"/>
+            <path d="M9 50 L22 43 M43 15 L55 9" stroke="#e3d6bf" stroke-width="2" stroke-linecap="round"/>
+            <text x="32" y="60" fill="#f0e7da" text-anchor="middle" font-size="6.5" letter-spacing="1.8">CDG</text>
+          </svg>`;
+      } else if (song.art === "noise") {
+        art.innerHTML = `
+          <svg viewBox="0 0 64 64" aria-hidden="true">
+            <rect width="64" height="64" fill="#e6b66d"/>
+            <path d="M0 0 H32 V16 H0 Z M32 16 H64 V32 H32 Z M0 32 H32 V48 H0 Z M32 48 H64 V64 H32 Z" fill="#d66c55"/>
+            <path d="M7 37 L31 7 L55 37 Z" fill="#f6e4bc" stroke="#47323a" stroke-width="2" stroke-linejoin="round"/>
+            <path d="M7 37 L55 37 L48 46 L14 46 Z" fill="#bd4f42" stroke="#47323a" stroke-width="2" stroke-linejoin="round"/>
+            <circle cx="26" cy="25" r="3" fill="#c94f45"/>
+            <circle cx="36" cy="31" r="3" fill="#c94f45"/>
+            <circle cx="31" cy="20" r="2.5" fill="#c94f45"/>
+            <text x="32" y="57" fill="#392a31" text-anchor="middle" font-size="8" font-weight="700" letter-spacing="1.2">WWN</text>
+          </svg>`;
       } else {
-        art.innerHTML = `<svg viewBox="0 0 64 64" aria-hidden="true">
-          <rect width="64" height="64" fill="#e6b66d"/>
-          <path d="M0 0 H32 V16 H0 Z M32 16 H64 V32 H32 Z M0 32 H32 V48 H0 Z M32 48 H64 V64 H32 Z" fill="#d66c55"/>
-          <path d="M7 37 L31 7 L55 37 Z" fill="#f6e4bc" stroke="#47323a" stroke-width="2" stroke-linejoin="round"/>
-          <path d="M7 37 L55 37 L48 46 L14 46 Z" fill="#bd4f42" stroke="#47323a" stroke-width="2" stroke-linejoin="round"/>
-          <circle cx="26" cy="25" r="3" fill="#c94f45"/>
-          <circle cx="36" cy="31" r="3" fill="#c94f45"/>
-          <circle cx="31" cy="20" r="2.5" fill="#c94f45"/>
-          <text x="32" y="57" fill="#392a31" text-anchor="middle" font-size="8" font-weight="700" letter-spacing="1.2">WWN</text>
-        </svg>`;
+        const initials = song.name
+          .split(/\s+/)
+          .filter(Boolean)
+          .slice(0, 3)
+          .map(word => word[0])
+          .join("")
+          .toUpperCase() || "♪";
+
+        let hash = 0;
+        for (const char of song.name) {
+          hash = (hash * 31 + char.charCodeAt(0)) >>> 0;
+        }
+
+        const hue = hash % 360;
+
+        art.innerHTML = `
+          <svg viewBox="0 0 64 64" aria-hidden="true">
+            <rect width="64" height="64" rx="7" fill="hsl(${hue} 24% 24%)"/>
+            <circle cx="32" cy="27" r="19" fill="hsl(${hue} 32% 42%)" stroke="hsl(${hue} 25% 78%)" stroke-width="1.5"/>
+            <circle cx="32" cy="27" r="12" fill="none" stroke="hsl(${hue} 25% 78% / .75)"/>
+            <circle cx="32" cy="27" r="4" fill="hsl(${hue} 30% 85%)"/>
+            <text x="32" y="56" fill="#fff" text-anchor="middle" font-size="10" font-weight="700" letter-spacing="1">${escapeSvgText(initials)}</text>
+          </svg>`;
       }
 
       cell.append(art);
@@ -398,9 +465,18 @@
 
     function render() {
       const query = search.value.trim().toLowerCase();
+
       const filtered = songs.filter(song => {
-        const searchable = [song.name, song.artist, song.url, ...song.ids].join(" ").toLowerCase();
-        const matchesFilter = activeFilter === "all" || song.type === activeFilter;
+        const searchable = [
+          song.name,
+          song.artist,
+          song.url,
+          ...song.ids
+        ].join(" ").toLowerCase();
+
+        const matchesFilter =
+          activeFilter === "all" || song.type === activeFilter;
+
         return matchesFilter && searchable.includes(query);
       });
 
@@ -414,6 +490,7 @@
         number.textContent = String(index + 1).padStart(2, "0");
 
         const nameCell = document.createElement("td");
+
         const name = document.createElement("div");
         name.className = "songname";
         name.textContent = song.name;
@@ -421,6 +498,7 @@
         const kind = document.createElement("span");
         kind.className = "kind";
         kind.textContent = song.type === "mashup" ? "Mashup" : "NONG";
+
         nameCell.append(name, document.createElement("br"), kind);
 
         const artist = document.createElement("td");
@@ -428,15 +506,21 @@
         artist.textContent = song.artist;
 
         const audioCell = document.createElement("td");
-        const audio = document.createElement("a");
-        audio.className = "audio-link";
-        audio.href = song.url;
-        audio.target = "_blank";
-        audio.rel = "noreferrer";
-        audio.textContent = "Open audio ↗";
-        audioCell.append(audio);
+
+        if (song.url) {
+          const audio = document.createElement("a");
+          audio.className = "audio-link";
+          audio.href = song.url;
+          audio.target = "_blank";
+          audio.rel = "noreferrer";
+          audio.textContent = "Open audio ↗";
+          audioCell.append(audio);
+        } else {
+          audioCell.textContent = "No audio link";
+        }
 
         const ids = document.createElement("td");
+
         song.ids.forEach(id => {
           const code = document.createElement("code");
           code.className = "idcode";
@@ -444,17 +528,92 @@
           ids.append(code);
         });
 
-        row.append(number, createArtwork(song), nameCell, artist, audioCell, ids);
+        row.append(
+          number,
+          createArtwork(song),
+          nameCell,
+          artist,
+          audioCell,
+          ids
+        );
+
         tbody.append(row);
       });
 
       empty.hidden = filtered.length !== 0;
-      count.textContent = `${filtered.length} ${filtered.length === 1 ? "song" : "songs"}`;
+
+      count.textContent =
+        `${filtered.length} ${filtered.length === 1 ? "song" : "songs"}`;
+
       visible.textContent = `showing ${filtered.length} of ${songs.length}`;
 
       document.querySelectorAll("[data-filter]").forEach(button => {
-        button.setAttribute("aria-pressed", String(button.dataset.filter === activeFilter));
+        button.setAttribute(
+          "aria-pressed",
+          String(button.dataset.filter === activeFilter)
+        );
       });
+    }
+
+    async function loadIndex() {
+      loadstatus.textContent = "fetching index.json";
+
+      try {
+        const response = await fetch(INDEX_URL, { cache: "no-store" });
+
+        if (!response.ok) {
+          throw new Error(`GitHub returned HTTP ${response.status}`);
+        }
+
+        const index = await response.json();
+        const hosted = index?.nongs?.hosted;
+
+        if (!hosted || typeof hosted !== "object" || Array.isArray(hosted)) {
+          throw new Error('Could not find the "nongs.hosted" object in index.json');
+        }
+
+        songs = Object.entries(hosted).map(([key, item]) => ({
+          key,
+          name: String(item?.name || key),
+          artist: String(item?.artist || "Unknown artist"),
+          url: typeof item?.url === "string" ? item.url : "",
+          ids: Array.isArray(item?.songs)
+            ? item.songs
+            : item?.songs == null
+              ? []
+              : [item.songs],
+          type: "nong",
+          art: key === "cup-de-grace"
+            ? "cup"
+            : key === "world-wide-noise"
+              ? "noise"
+              : "generated",
+          startOffset: Number(item?.startOffset) || 0
+        }));
+
+        loadstatus.textContent =
+          `synced from index.json · ${songs.length} entries`;
+
+        render();
+      } catch (error) {
+        loadstatus.textContent = "could not load index.json";
+        count.textContent = "Index failed to load";
+        visible.textContent = "check the JSON URL and try again";
+
+        empty.hidden = false;
+        empty.replaceChildren();
+
+        const message = document.createElement("strong");
+        message.textContent = "Could not load songs.";
+
+        const explanation = document.createElement("span");
+        explanation.textContent =
+          " Check that the GitHub JSON is public and valid, then refresh this page.";
+
+        empty.append(message, explanation);
+
+        console.error("Failed to load Requiem song index:", error);
+      }
     }
 
     search.addEventListener("input", render);
@@ -467,6 +626,7 @@
     });
 
     render();
+    loadIndex();
   </script>
 </body>
 </html>
