@@ -3,9 +3,12 @@ an index that i made
 ## what its about
 
 i made this for fun
+
 its for jukebox mod ( geometry dash mods )
+
 i was bored
-add this to
+
+add this to your jukebox
 
 ## how to use
 
